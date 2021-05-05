@@ -97,7 +97,7 @@ bool MyTestApp::keyPressed(const OgreBites::KeyboardEvent& evt)
     {
         getRoot()->queueEndRendering();
     }
-    if (evt.keysym.sym == OgreBites::SDLK_UP)
+    if (evt.keysym.sym == OgreBites::SDLK_UP || evt.keysym.sym == 'w')
     {
         Ogre::Vector3 pos = cam->getRealPosition();
         pos.z=3;
@@ -108,7 +108,7 @@ bool MyTestApp::keyPressed(const OgreBites::KeyboardEvent& evt)
         if (ret)
             cam->moveRelative(Ogre::Vector3(0, 0, +0.1));
     }
-    if (evt.keysym.sym == OgreBites::SDLK_DOWN)
+    if (evt.keysym.sym == OgreBites::SDLK_DOWN || evt.keysym.sym == 's')
     {
         Ogre::Vector3 pos = cam->getRealPosition();
         pos.z=3;
@@ -119,7 +119,7 @@ bool MyTestApp::keyPressed(const OgreBites::KeyboardEvent& evt)
         if (ret)
             cam->moveRelative(Ogre::Vector3(0, 0, -0.1));
     }
-    if (evt.keysym.sym == OgreBites::SDLK_LEFT)
+    if (evt.keysym.sym == OgreBites::SDLK_LEFT || evt.keysym.sym == 'a')
     {
         Ogre::Vector3 pos = cam->getRealPosition();
         pos.z=3;
@@ -130,7 +130,7 @@ bool MyTestApp::keyPressed(const OgreBites::KeyboardEvent& evt)
         if (ret)
             cam->moveRelative(Ogre::Vector3(+0.1, 0, 0));
     }
-    if (evt.keysym.sym == OgreBites::SDLK_RIGHT)
+    if (evt.keysym.sym == OgreBites::SDLK_RIGHT || evt.keysym.sym == 'd')
     {
         Ogre::Vector3 pos = cam->getRealPosition();
         pos.z=3;
